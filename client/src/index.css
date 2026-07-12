@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #ece5dd;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ece5dd;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #bdbdbd;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+/* Inputs */
+
+input {
+  outline: none;
+  border: 1px solid #d1d5db;
+  transition: 0.3s;
+}
+
+input:focus {
+  border-color: #25d366;
+  box-shadow: 0 0 5px rgba(37, 211, 102, 0.4);
+}
+
+/* Buttons */
+
+button {
+  transition: 0.3s;
+}
+
+button:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+/* Links */
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Chat Animation */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.chat-message {
+  animation: fadeIn 0.3s ease;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  #root {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  button {
+    width: 100%;
+  }
+
+  input {
+    width: 100%;
+  }
+}
